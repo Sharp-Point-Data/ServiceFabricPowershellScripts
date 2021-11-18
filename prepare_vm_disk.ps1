@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-$disk = Get-Disk -FriendlyName "Mounted Drive"
+$disk = Get-Disk -FriendlyName "data"
 
 New-Partition -UseMaximumSize -DriveLetter "G"
 Format-Volume -FileSystem NTFS -NewFileSystemLabel "Mounted Drive" -Confirm:$false -Force
